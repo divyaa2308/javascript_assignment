@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #div{
+        height: 100vh;
+        width: 100%;
+        background-color:rgb(92, 225, 88);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #one{
+        height: 100px;
+        width: 400px;
+        border: 2px solid black;
+        background-color: rgb(100, 92, 212);
+        font-size: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+</style>
+<body>
+    <div id="div" >
+    <div id="one" onclick="Toggle()"> Change BG Color</div>
+</div>
+
+    <!-- <button onclick="Toggle()">Toggle</button> -->
+    
+</body>
+<script>
+    function Toggle()
+    {
+    var value = document.getElementById("div") 
+        
+     if(value.style.backgroundColor == "pink")
+     {
+       
+        value.style.backgroundColor = "green"
+     } 
+     else{
+        value.style.backgroundColor = "pink"
+
+     }
+     
+    }
+</script>
+</html>

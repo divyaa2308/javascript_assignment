@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark sheet</title>
+    <style>
+       
+        .center , form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .center{
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <table cellspacing="4px" cellpadding="5px">
+            <th>MARKSHEET</th>
+            <tr>
+                <td><label for="">C Language</label></td>
+                <td><input type="text" name="" id="inp1" value="90"></td>
+            </tr>
+            <tr>
+                <td><label for="">C++ Language</label></td>
+                <td><input type="text" name="" id="inp2" value="64"></td>
+            </tr>
+            <tr>
+                <td><label for="">Database</label></td>
+                <td><input type="text" name="" id="inp3" value="93"></td>
+            </tr>
+            <tr>
+                <td><label for="">HTML</label></td>
+                <td><input type="text" name="" id="inp4" value="98"></td>
+            </tr>
+            <tr>
+                <td><label for="">CSS</label></td>
+                <td><input type="text" name="" id="inp5" value="95"></td>
+            </tr>
+            <tr>
+                <td><label for="">php</label></td>
+                <td><input type="text" name="" id="inp6" value="75"></td>
+            </tr>
+            <tr>
+                <td><label for="">Core java</label></td>
+                <td><input type="text" name="" id="inp7" value="97"></td>
+            </tr>
+        </table>
+    </form>
+    <div class="center">
+    <button onclick="set()">RESULT</button>
+        <h3 id="total1">TOTAL MARKS</h3>
+        <h3 id="per">PERSENTAGE %</h3>
+    </div>
+  
+   
+</body>
+<script>
+
+    function set() {
+
+        var mark1 = document.getElementById("inp1").value
+
+        var mark2 = document.getElementById("inp2").value
+  
+        var mark3 = document.getElementById("inp3").value
+   
+        var mark4 = document.getElementById("inp4").value
+
+        var mark5 = document.getElementById("inp5").value
+  
+        var mark6 = document.getElementById("inp6").value
+
+        var mark7 = document.getElementById("inp7").value
+    
+        var total = +mark1 + +mark2 + +mark3 + +mark4 + +mark5 + +mark6 + +mark7
+
+        document.getElementById("total1").innerHTML = total
+
+        var per = (total / 700) * 100 
+        document.getElementById("per").innerHTML = per
+
+    }
+
+</script>
+
+</html>
